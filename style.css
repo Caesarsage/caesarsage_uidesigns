@@ -110,8 +110,7 @@ body{
 .container .img{
     background: url("./images/bg-intro-desktop.svg")  repeat-x -95px -252px;
 }
-.easybank{
-    
+.easybank{   
     margin-top: -10%;
     border-top: 1px solid  hsl(220, 16%, 96%);
     background-color: hsl(220, 16%, 96%);
@@ -131,7 +130,10 @@ body{
     padding: 10px 10px 30px 0;
     text-align: start;
 }
-
+.product svg:hover,
+.product svg:focus{
+    transform: scale(.9,.9);
+}
 .easybank h3{
     font-weight: 300px;
     color:  darkgray;
@@ -185,15 +187,19 @@ body{
     max-width: 100%;
     border-radius: 5px 5px 0 0;
     object-fit: cover;
+    transition: .5s all ease-in-out;
+	transform: scale();
+}
+
+.card .figure{
+    transform: scale(1.1,1.1) rotate(0 , -2);
 }
 
 /*=========footer=============*/
 footer{
     background-color:  hsl(233, 26%, 24%);
 }
-.foot-bg{
-    background-color: white;
-}
+
 .foot-details{
     display: flex;
     padding-left: 100px;
@@ -204,6 +210,9 @@ footer{
 }
 .icons{
     padding: 30px 0 0 0;
+    fill: white;
+    transition: .5s all ease-in-out;
+	transform: scale(.9,.9);
 }
 footer a{
     text-decoration: none;
@@ -217,9 +226,18 @@ footer a:focus,
 footer a:hover{
     color: green;
 }
-footer .icon:focus,
-footer .icon:hover{
-    background-color: green;
+footer svg:focus,
+footer svg:hover{
+    fill: green;
+    transform: scale(1,1);
+    transform: scale(1.1,1.1) translate(0, -2px);
+}
+
+.c{
+    color: #00F260;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 /*================================================*/
 @media all and (max-width: 900px){
