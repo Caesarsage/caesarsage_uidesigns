@@ -1,0 +1,394 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 18px;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{
+	box-sizing: border-box;
+}
+*,*::before, *::after{
+	box-sizing: inherit;
+}
+body {
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:focus{
+	outline: none;
+}
+img, iframe, video, object {
+    max-width: 100%;
+}
+strong{
+    font-weight: bold;
+}
+
+/*GLOBAL*/
+body{
+    background: rgb(218, 214, 214);
+}
+.nav{
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 18px;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.links > ul{
+    display: flex;
+    
+}
+.links > ul> li >a{
+    padding-left: 10px;
+    list-style-type: none; 
+    text-decoration: none;
+    color: black;
+   
+}
+.links > ul >li>a:hover{
+    border-bottom: 5px solid green;
+    border-radius: 3px;
+    border-spacing: 200px;
+    padding-bottom: 36px;
+}
+.btn{
+    padding: 10px 25px;
+    margin-top: 8px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:  hsl(0, 0%, 98%)
+}
+.section1{
+    box-sizing: border-box;
+    padding:0 0 0 100px;
+    margin: 15% 0 0 0;
+   
+}
+.container img{
+    height: 700px;
+}
+ 
+.container .img{
+    background: url("./images/bg-intro-desktop.svg")  repeat-x -95px -252px;
+}
+.easybank{
+    
+    margin-top: -10%;
+    border-top: 1px solid  hsl(220, 16%, 96%);
+    background-color: hsl(220, 16%, 96%);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-right: 100px ;
+    color: rgb(46, 44, 44);
+}
+.product{
+    display: flex;
+    justify-content: space-around;
+}
+.product div{
+    margin-top: 64px;
+    padding: 10px 10px 30px 0;
+    text-align: start;
+}
+
+.easybank h3{
+    font-weight: 300px;
+    color:  darkgray;
+}
+.easybank p,
+.card-body p{
+    font-size: small;
+    font-weight: 300;
+    color: hsl(233, 8%, 62%);
+}
+
+/*=============================================*/
+.intro{
+    margin: 20px;
+    color: rgb(46, 44, 44);
+    padding-left: 100px;
+}
+.articles{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.card{
+    width: 20%;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 0 .1px rgba(255, 255, 255, 1);
+    
+}
+.card-body{
+    padding: 20px;
+}
+.card-body span p{
+    font-size: smaller;
+    font-weight: 200;
+    color: grey;
+}
+ .card-body a{
+     text-decoration: none;
+     font-weight: 500;
+     color: rgb(46, 44, 44);
+     font-size: large;
+ }
+ .card-body a:focus,
+ .card-body a:hover{
+     color: hsl(136, 65%, 51%);
+ }
+.figure{
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+}
+
+/*=========footer=============*/
+footer{
+    background-color:  hsl(233, 26%, 24%);
+}
+.foot-bg{
+    background-color: white;
+}
+.foot-details{
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    justify-content: space-between;
+    line-height: 2;
+}
+.icons{
+    padding: 30px 0 0 0;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(231, 225, 225);
+}
+footer p{
+    color: grey;
+    text-align: center;
+}
+footer a:focus,
+footer a:hover{
+    color: green;
+}
+footer .icon:focus,
+footer .icon:hover{
+    background-color: green;
+}
+/*================================================*/
+@media all and (max-width: 900px){
+    .nav{
+        justify-content: flex-start;
+        font-size: small;
+    }
+
+    .nav .btn{
+        display: none;
+    }
+    .container{
+        display: flex;
+        justify-content: flex-start;
+        background-color:  hsl(0, 0%, 98%)
+    }
+    .section1{
+        box-sizing: border-box;
+        padding:0 0 0 100px;
+        margin: 15% 0 0 0;
+       
+    }
+    .container img{
+        height: 507px;
+        width: 100%;
+    }
+     
+    .img{
+        box-sizing: border-box;
+        padding: 0 13% 0 0;
+    }
+
+    .articles{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .card{
+        width: 45%;
+        margin: 2%;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 0 .1px rgba(255, 255, 255, 1);
+        
+    }
+}
+
+@media (min-width: 640px) and (max-width: 900px){
+    .nav .btn{
+        display: block;
+    }
+    .regbtn{
+        margin-left: auto;
+    }
+}
+
+@media all and (max-width: 500px){
+    .nav{
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        justify-content: start;
+        padding: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    .nav img{
+        margin-left: -27px;
+    }
+    .links > ul{
+        display: none;
+    }
+    .nav .btn{
+        display: none;
+    }
+    .mobile-icon{
+        background: url("./images/icon-hamburger.svg")  0 0 no-repeat;
+        width: 25px;
+		height: 16px; 
+		margin: 23px 3% 1px 36%;;
+        cursor: pointer;
+        transition: 2s all ease-in-out;
+    }
+    /*jQuery CSS Calling*/
+	.mobile-icon.open {
+        background: url("./images/icon-close.svg")  0 -2px no-repeat ;
+        transition: 2s all ease-in-out;
+    }
+    
+	.links-list.active{
+        transition: 5s all ease-out;
+        display: block;
+        max-height: 400px;
+        text-align: center;
+        padding: 9% 32%;
+        font-weight: 600;
+        line-height: 2;
+        position: absolute;
+        border-radius: 10px;
+        left: 8px;
+        top: 57px;
+        background-color: white;
+       
+	}
+    /*====================================================*/
+    .container{
+        flex-direction: column-reverse;
+    }
+    .section1{
+        box-sizing: border-box;
+        padding: 20px;
+        margin-top: -14px;
+       text-align: center;
+    }
+    .container img{
+        height: 400px;
+    }
+    .container .img{
+        background: url("./images/bg-intro-mobile.svg")  repeat-x -95px 11px;
+    }
+    .easybank{
+        margin-top: 30px;
+        padding: 20px;
+        text-align: center;
+        color: rgb(46, 44, 44);
+    }
+    .product{
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;    
+    }
+    .product div{
+        margin: 5px;
+        text-align: center;
+    }
+  
+    .intro{
+        color: rgb(46, 44, 44);
+        padding:15px 15px 0 15px;
+    }
+    .articles{
+        display: flex;
+        flex-direction: column;
+        padding:5px;
+    }
+    .card{
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 0 .1px rgba(255, 255, 255, 1);
+        width: fit-content;
+        margin: 0 10px 10px 10px;
+    }
+ 
+     /*========================================*/
+ 
+    .foot-details{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        justify-content: space-between;
+        line-height: 2;
+    }
+    footer p{
+        color: grey;
+        text-align: center;
+    }
+  
+}
+/*============================================*/
